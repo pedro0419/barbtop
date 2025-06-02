@@ -14,7 +14,7 @@
         $stmt-> bindValue(':email',$email);
         $stmt-> bindValue(':senha',$senha);
         if ($stmt->execute()) {
-           $_SESSION['comcluido'] = "<p style='color:rgb(255, 255, 255); font-weight:600; text-align: center;'>dados cadastrados</p>";
+           $_SESSION['concluido'] = "<p style='color:rgb(255, 255, 255); font-weight:600; text-align: center;'>dados cadastrados</p>";
            header("location: cadastro.php");
            exit();
         }
