@@ -57,3 +57,23 @@ CREATE TABLE Avaliacao (
     FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
     FOREIGN KEY (id_barbeiro) REFERENCES Barbeiro(id_barbeiro)
 );
+
+
+-- Tabela barbeiro
+CREATE TABLE Barbeiro (
+    id_barbeiro INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    email VARCHAR(100),
+    especialidade VARCHAR(100)
+);
+
+
+-- Tabela cliente
+CREATE TABLE Cliente (
+    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    email VARCHAR(100),
+    data_nascimento DATE
+);
