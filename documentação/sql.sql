@@ -1,3 +1,6 @@
+CREATE DATABASE barbtop;
+USE barbtop;
+
 CREATE TABLE Corte (
     id_corte INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
