@@ -20,7 +20,7 @@
           </div>
           <div>
                <div>
-                    <label for="numeroCelular"  class="labels" >Idade:</label>
+                    <label for="idade"  class="labels" >Idade:</label>
                </div>
                <div>
                      <input type="int" name="idade" class="inputs">
@@ -44,7 +44,7 @@
           </div>
           <div>
                <div>
-                    <label for="senha"  class="labels">CPF:</label>
+                    <label for="CPF"  class="labels">CPF:</label>
                </div>
                <div>
                     <input type="number" name="CPF" class="inputs">
@@ -59,7 +59,7 @@
                if (isset($_SESSION['erro'])) {
                     echo $_SESSION['erro'];
                }
-               session_unset();
+               unset($_SESSION['erro']);
           ?>
           <div>
                <input type="submit" id="enviar" value="Cadastrar">
@@ -74,6 +74,33 @@
             <th>Telefone</th>
             <th>CPF</th>
         </tr>
+          <tbody>
+            <?php   
+               if (isset($_SESSION['excluido'])) {
+                    echo $_SESSION['excluido'];
+               }
+
+               if (isset($_SESSION['erro'])) {
+                    echo $_SESSION['erro'];
+               }
+               session_unset();
+
+            require_once "conexao.php";
+
+            $stmt = $conexao->prepare("SELECT * FROM barbeiros;");
+            $stmt->execute();
+
+            while ($rows = $stmt->fetch(PDO::FETCH_OBJ)) { ?>
+                <tr>
+                    <td><?php echo $rows->nome; ?></td>
+                    <td><?php echo $rows->idade; ?></td>
+                    <td><?php echo $rows->endereco; ?></td>
+                    <td><?php echo $rows->telefone; ?></td>
+                    <td><?php echo $rows->CPF; ?></td>
+                    <td><a href="deletar.php?ID= <?php echo $rows->CPF; ?>">excluir</a></td>
+                </tr>
+            <?php } ?>
+        </tbody>
     </table>
 </body>
 </html>
