@@ -6,6 +6,7 @@
     $endereco = trim($_POST['endereco']);
     $email = trim($_POST['email']); 
     $senha = trim(password_hash($_POST['senha'], PASSWORD_DEFAULT));
+
     if (!empty($email) && !empty($senha)) {
         $stmt = $conexao-> prepare("INSERT INTO usuarios (nome, numeroCelular, endereco, email, senha) VALUES (:nome, :numeroCelular, :endereco, :email, :senha)");
         $stmt-> bindValue(':nome',$nome); 

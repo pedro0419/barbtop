@@ -39,7 +39,7 @@
                     <label for="email"  class="labels">Telefone:</label>
                </div>
                <div>
-                    <input type="tel" name="telefone" class="inputs">
+                    <input type="number" name="telefone" class="inputs">
                </div>
           </div>
           <div>
@@ -87,18 +87,28 @@
 
             require_once "conexao.php";
 
-            $stmt = $conexao->prepare("SELECT * FROM barbeiros;");
+            $stmt = $conexao->prepare("SELECT * FROM barbeiros ;");
             $stmt->execute();
 
-            while ($rows = $stmt->fetch(PDO::FETCH_OBJ)) { ?>
+            while ($barbeiros = $stmt->fetch(PDO::FETCH_OBJ)) { ?>
                 <tr>
-                    <td><?php echo $rows->nome; ?></td>
-                    <td><?php echo $rows->idade; ?></td>
-                    <td><?php echo $rows->endereco; ?></td>
-                    <td><?php echo $rows->telefone; ?></td>
-                    <td><?php echo $rows->CPF; ?></td>
-                    <td><a href="deletar.php?ID= <?php echo $rows->CPF; ?>">excluir</a></td>
-                </tr>
+                    <td><?php echo $barbeiros->nome; ?></td>
+                    <td><?php echo $barbeiros->idade; ?></td>
+                    <td><?php echo $barbeiros->endereco; ?></td>
+                    <td><?php echo $barbeiros->telefone; ?></td>
+                    <td><?php echo $barbeiros->CPF; ?></td>
+                    <td><a href="deletarBarbeiros.php?ID=<?php echo $rows->CPF;?>">excluir</a></td>
+                    <td><form action="formAtualizarBarbeiros.php" method="post">
+                         <input type="hidden" name="nome" value="<?php echo $barbeiros->nome ?>">
+                         <input type="hidden" name="idade" value="<?php echo $barbeiros->idade ?>">
+                         <input type="hidden" name="endereco" value="<?php echo $barbeiros->endereco?>">
+                         <input type="hidden" name="telefone" value="<?php echo $barbeiros->telefone?>">
+                         <input type="hidden" name="CPF" value="<?php echo $barbeiros->CPF?>">
+                         <input type="hidden" name="id" value="<?php echo $barbeiros->id?>">
+                         <input type="submit" value="atualizar">
+                         </form>
+                    </td>
+                </tr> 
             <?php } ?>
         </tbody>
     </table>
