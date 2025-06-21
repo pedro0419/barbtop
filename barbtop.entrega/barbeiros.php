@@ -83,7 +83,7 @@
                if (isset($_SESSION['erro'])) {
                     echo $_SESSION['erro'];
                }
-               session_unset();
+               unset($_SESSION['erro']);
 
             require_once "conexao.php";
 
@@ -97,7 +97,12 @@
                     <td><?php echo $barbeiros->endereco; ?></td>
                     <td><?php echo $barbeiros->telefone; ?></td>
                     <td><?php echo $barbeiros->CPF; ?></td>
-                    <td><a href="deletarBarbeiros.php?ID=<?php echo $rows->CPF;?>">excluir</a></td>
+                    <td>
+                         <form action="deletarBarbeiros.php" method="post">
+                              <input type="hidden" name="id" value="<?php echo $barbeiros->id ?>">
+                              <input type="submit" value="excluir">
+                         </form>
+                    </td>
                     <td><form action="formAtualizarBarbeiros.php" method="post">
                          <input type="hidden" name="nome" value="<?php echo $barbeiros->nome ?>">
                          <input type="hidden" name="idade" value="<?php echo $barbeiros->idade ?>">
@@ -108,7 +113,21 @@
                          <input type="submit" value="atualizar">
                          </form>
                     </td>
-                </tr> 
+                </tr>
+                <?php   
+               if (isset($_SESSION['atualizado'])) {
+                    echo $_SESSION['atualizado'];
+               }
+
+               if (isset($_SESSION['erro'])) {
+                    echo $_SESSION['erro'];
+               }
+
+               if (isset($_SESSION['campoV'])) {
+                    echo $_SESSION['campoV'];
+               }
+               session_unset();
+               ?> 
             <?php } ?>
         </tbody>
     </table>

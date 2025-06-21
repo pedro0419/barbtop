@@ -9,10 +9,10 @@
    <?php
         require_once "conexao.php";
         session_start();
-        $idCPF = $_GET["ID"];
+        $id = $_POST['id'];
 
-        $stmt = $conexao->prepare("DELETE FROM barbeiros WHERE CPF = :CPF");
-        $stmt->bindValue(":CPF", $idCPF);
+        $stmt = $conexao->prepare("DELETE FROM barbeiros WHERE id = :id");
+        $stmt->bindValue(":id", $id);
 
         if($stmt->execute()) {
             $_SESSION['excluido'] = "<p style='color:rgb(0, 0, 0); font-weight:600; text-align: center;'>dados excluidos</p>";
