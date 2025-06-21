@@ -3,6 +3,6 @@
         session_start();
     }
     if (!isset($_SESSION["id"])){
-        die ("acesso bloqueado");
+        die ('acesso bloqueado');
     }
 ?>

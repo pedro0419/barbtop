@@ -8,7 +8,7 @@
 <body>
     <body>
     <div >
-        <form action="cadastroBarbeiros.php" method="post"  id="container">
+        <form action="createBarbeiros.php" method="post"  id="container">
           <h1 id = "nome-cadastro">Cadastro</h1>
           <div>
                <div>
@@ -98,12 +98,12 @@
                     <td><?php echo $barbeiros->telefone; ?></td>
                     <td><?php echo $barbeiros->CPF; ?></td>
                     <td>
-                         <form action="deletarBarbeiros.php" method="post">
+                         <form action="deleteBarbeiros.php" method="post">
                               <input type="hidden" name="id" value="<?php echo $barbeiros->id ?>">
                               <input type="submit" value="excluir">
                          </form>
                     </td>
-                    <td><form action="formAtualizarBarbeiros.php" method="post">
+                    <td><form action="updateBarbeirosForm.php" method="post">
                          <input type="hidden" name="nome" value="<?php echo $barbeiros->nome ?>">
                          <input type="hidden" name="idade" value="<?php echo $barbeiros->idade ?>">
                          <input type="hidden" name="endereco" value="<?php echo $barbeiros->endereco?>">
