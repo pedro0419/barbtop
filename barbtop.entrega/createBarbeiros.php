@@ -14,14 +14,14 @@
         $stmt-> bindValue(':telefone',$telefone);
         $stmt-> bindValue(':CPF',$CPF);
         if ($stmt->execute()) {
-           $_SESSION['concluido'] = "<p style='color:rgb(0, 0, 0); font-weight:600; text-align: center;'>dados cadastrados</p>";
+           $_SESSION['cadastro'] = "<p style='color:rgb(0, 0, 0); font-weight:600; text-align: center;'>dados cadastrados</p>";
            header("location: barbeiros.php");
            exit();
         }
     }
     else {
         $_SESSION['erro'] = "<p style='color:rgb(0, 0, 0); font-weight:600; text-align: center;'>Preencha os campos</p>";
-        header("location: barbeiros.php");
+        header("location: createBarbeirosForm.php");
         exit();
     }
     

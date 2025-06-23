@@ -8,14 +8,10 @@
 <body>
           <?php 
                session_start();
-               if (isset($_SESSION['concluido'])) {
-                    echo $_SESSION['concluido'];
+               if (isset($_SESSION['cadastro'])) {
+                    echo $_SESSION['cadastro'];
                }
-
-               if (isset($_SESSION['erro'])) {
-                    echo $_SESSION['erro'];
-               }
-               unset($_SESSION['erro']);
+               unset($_SESSION['cadastro']);
           ?>
     </div>
     <table border="1" width="100%">

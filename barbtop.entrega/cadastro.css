@@ -52,6 +52,8 @@ body{
     background-color: #AD2831;
     color: white;
     font-size: xx-large;
+    border: none;
+    outline: none;
 }
 #nome-cadastro{
    font-size: 60px;

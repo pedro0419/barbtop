@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 body{
     background-image: url("fundo.png");
@@ -12,38 +12,37 @@ body{
     justify-content: flex-end;
     align-items: center;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width:100vw;
 }
 #container{
     background-color: #640D14;
     color: white;
-    display: flex;  
+    display: flex;
     align-items: center;
-    min-height: 60vh;
-    min-width: 40vh;
     border-radius: 15px; 
     box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
-    margin: 0px 60px 0px 20px;
+    margin: 0px 60px 0px 0px;
     flex-direction: column;
     padding: 25px;
-    justify-content: space-between;
+
 }
 .inputs{
     border-radius: 10px;
     height: 60px;
-    width: 400px;
+    width: 350px;
     align-items: center;
     justify-content: center;
     display: flex;
     font-size: xx-large;
+    padding: 10px;
 }
 .labels{
     color: white;
     font-size: x-large;
 }
 #enviar{
-    height: 60px;
-    width: 320px;
+    height: 40px;
+    width: 280px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -53,12 +52,7 @@ body{
     font-size: xx-large;
     border: none;
     outline: none;
-    
 }
-#nome-cadastro{
-   font-size: 60px;
-}
-.link_cadastro{
-    color: white;
-    text-decoration: none;
+#enviardiv{
+    padding: 10px;
 }
