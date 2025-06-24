@@ -13,20 +13,22 @@
 </head>
 <body>
     <header id = "cabecalho">
-        <img src="menu.png" alt="menu">
+        <img src="menu.png" alt="menu" id = "butaoJS">
         <nav id ="sidemenu">
             <ul>
-                <li><a href="">Meus clientes</a></li>
-                <li><a href="cortes.php">Meus cortes</a></li>
-                <li><a href="">Meu lucro</a></li>
-                <li><a href="barbeiros.php">Meus barbeiros</a></li>
+                <li class = "itensLista"><a href="">Meus clientes</a></li>
+                <li class = "itensLista"><a href="cortes.php">Meus cortes</a></li>
+                <li class = "itensLista"><a href="">Meu lucro</a></li>
+                <li class = "itensLista"><a href="barbeiros.php">Meus barbeiros</a></li>
+                <li class = "itensLista">
+                    <form action="logout.php" method = "post">
+                        <input type="submit" value = "sair">
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
     
-    
-    <form action="logout.php" method = "post">
-        <input type="submit" value = "sair">
-    </form>
+    <script src = "sidebar.js"></script>
 </body>
 </html>

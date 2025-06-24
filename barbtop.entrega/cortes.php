@@ -89,6 +89,7 @@
                                    if (isset($_SESSION['campoOK'])) {
                                         echo $_SESSION['campoOK'];
                                    }
+                                   unset($_SESSION['atualizadoOK']);
                               ?> 
                          <?php } ?>
                     </tbody>

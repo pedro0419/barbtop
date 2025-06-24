@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sidemenu{
+    background-color: #A6212A;
+    height: 100vh;
+    width: 300px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1000;
+}
+#sidemenu.show{
+    opacity: 1;
+}
+.itensLista{
+    list-style: none;
+}
+.itensLista>a{
+    text-decoration: none;
+    color: white;
+}
