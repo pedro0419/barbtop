@@ -1,4 +1,8 @@
 <?php
+    
+    include "protecao.php";
+?>
+<?php
     require_once "conexao.php";
     $nome = $_POST['nome'];
     $idade = $_POST['idade'];

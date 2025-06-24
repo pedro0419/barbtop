@@ -1,4 +1,7 @@
 <?php
+    include "protecao.php";
+?>
+<?php
     require_once "conexao.php";
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
@@ -17,19 +20,19 @@
 <body>
     <form action="updateCortes.php" method = "post" id = "container">
         <div>
-            <label for="nome" >Nome:</label>
+            <label for="nome" class="labels" >Nome:</label>
         </div>
         <div>
             <input type="text" name = "nome" value ="<?php echo $nome?>"  class="inputs">
         </div>
         <div>
-            <label for="descricao">Descrição</label>
+            <label for="descricao" class="labels" >Descrição</label>
         </div>
         <div>
-            <input type="text" name = "descricao" value ="<?php echo $descricao ?>"  class="inputs">
+            <input type="text" name = "descricao" value ="<?php echo $descricao ?>"  id ="inputsDcri">
         </div>
         <div>
-            <label for="preco">Preço:</label>
+            <label for="preco" class="labels" >Preço:</label>
         </div>
         <div>
             <input type="text" name = "preco" value ="<?php echo $preco ?>"  class="inputs">
@@ -37,8 +40,8 @@
         <div>
             <input type="hidden" name="id" value="<?php echo $id ?>">
         </div>
-        <div>
-            <input type="submit" value = "Atualizar">
+        <div id="enviardiv">
+            <input type="submit" value = "Atualizar" id="enviar">
         </div>
     </form>
     

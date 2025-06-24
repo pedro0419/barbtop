@@ -1,3 +1,7 @@
+<?php
+     session_start();
+    include "protecao.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,6 @@
         <form action="createCortes.php" method="post"  id="container">
           <h1 id = "nome-cadastro">Cadastro de Cortes</h1>
           <?php
-          session_start();
           if (isset($_SESSION['erroOK'])) {
                     echo $_SESSION['erroOK'];
                }

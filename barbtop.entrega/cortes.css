@@ -7,10 +7,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: white;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+main {
+    padding: 50px;
 }
 
 #cabecalho {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     background-color: #660e0e;
@@ -32,13 +40,7 @@ body {
     flex-grow: 1;
 }
 
-#menu {
-    width: 30px;
-    height: 20px;
-    background-image: url('menu.png'); /* Substituir com o ícone do menu */
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+
 
 #conteudo {
     padding: 30px;
@@ -46,10 +48,9 @@ body {
 }
 
 #tabela-barbeiros {
-    width: 100%;
+    
     border-collapse: collapse;
     margin-bottom: 50px;
-    margin: 50px;
 }
 
 #tabela-barbeiros th,
@@ -101,7 +102,6 @@ body {
     outline: none;
     border-radius: 10px;
 }
-
-.botao_crud{
-    border: none;
+.acoes{
+    padding: 5px;
 }

@@ -1,3 +1,7 @@
+<?php
+     session_start();
+    include "protecao.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,6 @@
         <form action="createBarbeiros.php" method="post"  id="container">
           <h1 id = "nome-cadastro">Cadastro</h1>
           <?php
-          session_start();
           if (isset($_SESSION['erro'])) {
                     echo $_SESSION['erro'];
                }

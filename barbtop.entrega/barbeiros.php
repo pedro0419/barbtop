@@ -1,3 +1,7 @@
+<?php
+     session_start();
+     include "protecao.php";  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +11,32 @@
 </head>
 <body>
           <?php 
-               session_start();
                if (isset($_SESSION['cadastro'])) {
                     echo $_SESSION['cadastro'];
                }
                unset($_SESSION['cadastro']);
+
+               if (isset($_SESSION['excluido'])) {
+                    echo $_SESSION['excluido'];
+               }
+
+               if (isset($_SESSION['erro'])) {
+                    echo $_SESSION['erro'];
+               }
+               unset($_SESSION['erro']);
+
+               if (isset($_SESSION['atualizado'])) {
+                    echo $_SESSION['atualizado'];
+               }
+
+               if (isset($_SESSION['erro'])) {
+                    echo $_SESSION['erro'];
+               }
+
+               if (isset($_SESSION['campoV'])) {
+                    echo $_SESSION['campoV'];
+               }
+               unset($_SESSION['atualizado']);
           ?>
     </div>
     <table border="1" width="100%">
@@ -24,14 +49,6 @@
         </tr>
           <tbody>
             <?php   
-               if (isset($_SESSION['excluido'])) {
-                    echo $_SESSION['excluido'];
-               }
-
-               if (isset($_SESSION['erro'])) {
-                    echo $_SESSION['erro'];
-               }
-               unset($_SESSION['erro']);
 
             require_once "conexao.php";
 
@@ -61,21 +78,7 @@
                          <input type="submit" value="atualizar">
                          </form>
                     </td>
-                </tr>
-                <?php   
-               if (isset($_SESSION['atualizado'])) {
-                    echo $_SESSION['atualizado'];
-               }
-
-               if (isset($_SESSION['erro'])) {
-                    echo $_SESSION['erro'];
-               }
-
-               if (isset($_SESSION['campoV'])) {
-                    echo $_SESSION['campoV'];
-               }
-               session_unset();
-               ?> 
+                </tr> 
             <?php } ?>
         </tbody>
     </table>
