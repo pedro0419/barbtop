@@ -2,27 +2,91 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    overflow: hidden;
+}
+
 #cabecalho{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-#sidemenu{
     background-color: #A6212A;
+    height: 100px;
+}
+
+#sidemenu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color:  #85161d;
     height: 100vh;
-    width: 300px;
+    width: 150px;
     opacity: 0;
     overflow: hidden;
-    z-index: 1000;
+    z-index: 1;
+    padding-right: 30px;
 }
+
+#sidemenu ul {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+
+}
+
 #sidemenu.show{
+    z-index: 3;
     opacity: 1;
 }
+
+#sidemenu li{
+    z-index: -5000;
+}
+
+#sidemenu.show li{
+    z-index: 4;
+}
+
 .itensLista{
+    padding-right: 40px;
     list-style: none;
+    font-size: small;
+    padding: 0px 0px 0px 10px;
 }
 .itensLista>a{
     text-decoration: none;
     color: white;
+}
+
+#butaoJS{
+    z-index: 2;
+    padding: 0px 30px 0px 0px;
+}
+
+.itensLista:hover{
+    background-color: #A6212A;
+}
+
+#logo{
+    height: 100px;
+    padding: 0px 0px 0px 30px;
+}
+
+#barbtop{
+    color: white;
+    font-size: 50px;
+}
+#logaut{
+    border-radius: 10px;
+    height: 25px;
+    width: 60px;
+    color: #85161d;
+}
+
+#logaut:hover{
+    color: #A6212A;
 }

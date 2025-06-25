@@ -1,5 +1,4 @@
-<?php
-    
+<?php  
     include "protecao.php";
 ?>
 <?php
@@ -21,43 +20,43 @@
     <link rel="stylesheet" href= "updateBarbeiros.css">
 </head>
 <body>
-    <form action="updateBarbeiros.php" method = "post">
+    <form action="updateBarbeiros.php" method = "post"  id = "container">
         <div>
-            <label for="nome">Nome:</label>
+            <label for="nome" class="labels">Nome:</label>
         </div>
         <div>
-            <input type="text" name = "nome" value ="<?php echo $nome?>">
+            <input type="text" name = "nome" value ="<?php echo $nome?>"  class="inputs">
         </div>
         <div>
-            <label for="idade">Idade:</label>
+            <label for="idade" class="labels">Idade:</label>
         </div>
         <div>
-            <input type="text" name = "idade" value ="<?php echo $idade?>">
+            <input type="text" name = "idade" value ="<?php echo $idade?>"  class="inputs">
         </div>
         <div>
-            <label for="enereco">Endereço:</label>
+            <label for="enereco" class="labels">Endereço:</label>
         </div>
         <div>
-            <input type="text" name = "endereco" value ="<?php echo $endereco?>">
+            <input type="text" name = "endereco" value ="<?php echo $endereco?>"  class="inputs">
         </div>
         <div>
-            <label for="telefone">Telefone:</label>
+            <label for="telefone" class="labels">Telefone:</label>
         </div>
         <div>
-            <input type="text" name = "telefone" value ="<?php echo $telefone?>">
+            <input type="text" name = "telefone" value ="<?php echo $telefone?>"  class="inputs">
         </div>
         <div>
-            <label for="CPF">CPF:</label>
+            <label for="CPF" class="labels">CPF:</label>
         </div>
         <div>
-            <input type="text" name = "CPF" value ="<?php echo $CPF?>">
+            <input type="text" name = "CPF" value ="<?php echo $CPF?>"  class="inputs">
         </div>
         <div>
             <input type="hidden" name="id" value="<?php echo $id ?>">
         </div>
         
-        <div>
-            <input type="submit" value = "Atualizar">
+        <div id="enviardiv">
+            <input type="submit" value = "Atualizar" id="enviar">
         </div>
     </form>
     
