@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+    width: 100vw;
+    height: 100vh; 
+}
+
+main {
+    padding: 50px;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A6212A;
+    height: 100px;
+}
+
+#logo {
+    height: 100px;
+    padding: 0px 0px 0px 30px;
+}
+
+#titulo {
+    color: white;
+    font-size: 50px;
+}
+
+#tabela-barbeiros { 
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+#tabela-barbeiros th,
+#tabela-barbeiros td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.linha-cabecalho {
+    background-color: #8e1b1b;
+    color: white;
+}
+
+#botao-cadastrar {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #660e0e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 280px;
+    height: 60px;
+}
+
+#botao-cadastrar:hover {
+    background-color: #880f0f;
+}
+#excluir{
+    background-color: #660e0e;
+    color: #ffffff;
+    width: 60px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+#atualizar{
+    background-color: #660e0e;
+    color: #ffffff;
+    width: 60px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.acoes{
+    padding: 5px;
+}
+
+#sidemenu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color:  #85161d;
+    height: 100vh;
+    width: 150px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1;
+    padding-right: 30px;
+}
+
+#sidemenu ul {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+#sidemenu.show{
+    z-index: 3;
+    opacity: 1;
+}
+
+#sidemenu li{
+    z-index: -5000;
+}
+
+#sidemenu.show li{
+    z-index: 4;
+}
+
+.itensLista{
+    padding-right: 40px;
+    list-style: none;
+    font-size: small;
+    padding: 0px 0px 0px 10px;
+}
+.itensLista>a{
+    text-decoration: none;
+    color: white;
+}
+
+#butaoJS{
+    z-index: 2;
+    padding: 0px 30px 0px 0px;
+}
+
+.itensLista:hover{
+    background-color: #A6212A;
+}
+
+#logaut{
+    border-radius: 10px;
+    height: 25px;
+    width: 60px;
+    color: #85161d;
+}
+
+#logaut:hover{
+    color: #A6212A;
+}
